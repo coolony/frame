@@ -10,6 +10,10 @@ describe('exports', function() {
     core.should.have.property('asyncForEach');
   });
   
+  it('should expose Cache', function() {
+    core.should.have.property('Cache');
+  });
+  
   it('should expose CappedCache', function() {
     core.should.have.property('CappedCache');
   });

@@ -8,6 +8,7 @@
 module.exports = {
   Locator: require('./lib/locator'),
   asyncForEach: require('./lib/async_foreach'),
+  Cache: require('./lib/cache'),
   CappedCache: require('./lib/capped_cache'),
   classes: require('./lib/classes'),
   functions: require('./lib/functions')
