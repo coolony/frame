@@ -1,8 +1,8 @@
 var Locator = require('../lib/locator'),
     should = require('should'),
-    testA = __dirname + '/test_folders/a',
-    testB = __dirname + '/test_folders/b',
-    testC = __dirname + '/test_folders/c';
+    testA = __dirname + '/support/test_folders/a',
+    testB = __dirname + '/support/test_folders/b',
+    testC = __dirname + '/support/test_folders/c';
 
 // Dummy cache class   
 function DummyCache(foo, bar) {

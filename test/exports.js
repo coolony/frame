@@ -38,4 +38,12 @@ describe('exports', function() {
     core.functions.should.have.property('decorate');
   });
   
+   it('should expose files', function() {
+    core.should.have.property('files');
+  });
+  
+  it('should expose files.requireDir', function() {
+    core.files.should.have.property('requireDir');
+  });
+  
 });

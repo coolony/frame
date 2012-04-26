@@ -11,5 +11,8 @@ module.exports = {
   Cache: require('./lib/cache'),
   CappedCache: require('./lib/capped_cache'),
   classes: require('./lib/classes'),
-  functions: require('./lib/functions')
+  functions: require('./lib/functions'),
+  files: require('./lib/files'),
+  
+  version: '0.1.1'
 }
