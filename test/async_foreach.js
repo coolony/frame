@@ -53,8 +53,22 @@ describe('asyncForEach', function() {
   it('should call callback with empty array', function(done) {
     asyncForEach(
       [],
-      function(){},
+      function() {},
       done
+    )
+  });
+  
+  it('should correctly pass errors to callback, and that subsequent items are never processed', function(done) {
+    asyncForEach(
+      ['foo', 'bar'],
+      function(item, next) {
+        item.should.not.equal('bar')
+        next(new Error('something broke'));
+      },
+      function(err) {
+        err.message.should.equal('something broke');
+        done();
+      }
     )
   });
   
