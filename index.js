@@ -14,5 +14,5 @@ module.exports = {
   functions: require('./lib/functions'),
   files: require('./lib/files'),
   
-  version: '0.1.1'
+  version: '0.1.2'
 }
