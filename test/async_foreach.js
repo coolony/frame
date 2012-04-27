@@ -50,6 +50,21 @@ describe('asyncForEach', function() {
     )
   });
   
+  it('should call function once per item', function(done) {
+    var calls = 0;
+    asyncForEach(
+      [0, 1, 2],
+      function(item, next){
+        calls++;
+        next();
+      },
+      function() {
+        calls.should.equal(4);
+        done();
+      }
+    )
+  });
+  
   it('should call callback with empty array', function(done) {
     asyncForEach(
       [],
