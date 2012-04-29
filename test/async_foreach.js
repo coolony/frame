@@ -87,4 +87,18 @@ describe('asyncForEach', function() {
     )
   });
   
+  it('should correctly pass argument to the iterator', function(done) {
+    asyncForEach(
+      ['foo', 'bar'],
+      function(item, arg, next) {
+        arg.should.equal('woo');
+        next();
+      },
+      ['woo'],
+      function() {
+        done();
+      }
+    )
+  });
+  
 });
